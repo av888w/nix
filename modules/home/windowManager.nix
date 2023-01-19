@@ -21,6 +21,6 @@ in
 
     home.file.".config/herbstluftwm".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nix/config/herbstluftwm";
-  }
+  };
 }
 
