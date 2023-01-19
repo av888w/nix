@@ -1,5 +1,0 @@
-{ config, ... }: {
-  imports = [
-    ./windowManager.nix
-  ];
-}

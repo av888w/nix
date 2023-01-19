@@ -10,11 +10,8 @@ in
   config = mkIf cfg.enable {
     boot = {
       loader = {
-        grub = {
-          device = "nodev";
-          enable = true;
-          version = 2;
-        };
+        efi.canTouchEfiVariables = true;
+        systemd-boot.enable = true;
       };
       
       initrd = {

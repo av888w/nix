@@ -19,10 +19,12 @@
       };
 
       homeConfigurations.${host} = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./modules/home
-        ];
+	configuration = { pkgs, config, ... }:
+	  {
+	    programs.home-manager.enable = true;
+	    imports = [ ./home.nix ];
+	  };
+	system = "x86_64-linux";
       };
     };
 }

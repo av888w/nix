@@ -9,6 +9,16 @@
     ./modules/boot.nix
   ];
 
+  modules = {
+    networking.enable = true;
+    hardware.enable = true;
+    locales.enable = true;
+    sound.enable = true;
+    xorg.enable = true;
+    boot.enable = true;
+    users.enable = true;
+  };
+
   system.stateVersion = "23.05";
 }
 
